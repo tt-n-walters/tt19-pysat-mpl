@@ -7,7 +7,8 @@ import math
 
 def y(x):
     return math.sin(x)
-
+def z(x):
+    return math.cos(x)
 
 
 figure = plt.figure()
@@ -15,8 +16,9 @@ axes = mplot3d.Axes3D(figure)
 
 x_coords = stepped(0, 2 * math.pi, 0.05)
 y_coords = [y(x) for x in x_coords]
+z_coords = [z(x) for x in x_coords]
 
-axes.plot(x_coords, y_coords)
+axes.plot(x_coords, y_coords, z_coords)
 
 plt.show()
 
