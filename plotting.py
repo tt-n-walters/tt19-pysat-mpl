@@ -15,7 +15,10 @@ y_coords = []
 for x in x_coords:
     y_coords.append(y(x))
 
+args = {
+    "linestyle": "-.",
+    "color": "magenta"
+}
 
-plt.plot(x_coords, y_coords)
-plt.grid()
+plt.plot(x_coords, y_coords, **args)
 plt.show()
